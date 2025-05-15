@@ -10,14 +10,12 @@ export default function Countdown({ targetDate, onComplete }) {
         minutes: 0,
         seconds: 0,
     })
-    const [isComplete, setIsComplete] = useState(false)
 
     useEffect(() => {
         const calculateTimeLeft = () => {
             const difference = new Date(targetDate) - new Date()
 
             if (difference <= 0) {
-                setIsComplete(true)
                 onComplete()
                 return {
                     days: 0,

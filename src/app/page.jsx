@@ -12,12 +12,12 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-05-15T17:50:00"
+const ANNIVERSARY_DATE = "2025-05-25T00:00:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2022-01-01T00:00:00"
 
 export default function Home() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [showContent, setShowContent] = useState(false)
   const [showTapToReveal, setShowTapToReveal] = useState(false)
   // const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
@@ -36,7 +36,7 @@ export default function Home() {
     const anniversary = new Date(ANNIVERSARY_DATE)
     if (now >= anniversary) {
       setShowContent(true)
-      // setShowTapToReveal(true)
+      setShowTapToReveal(true)
     }
   }, [])
 
