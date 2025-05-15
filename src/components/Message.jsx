@@ -28,7 +28,7 @@ export default function Message({ message }) {
             </motion.div>
 
             <motion.div
-                className="absolute -bottom-36 right-20 md:-bottom-24 md:-right-48 w-32 h-32 text-5xl md:text-6xl"
+                className="absolute -bottom-30 right-20 md:-bottom-24 md:-right-48 w-32 h-32 text-5xl md:text-6xl"
                 animate={{
                     y: [0, -15, 0],
                     rotate: [0, -10, 0],
