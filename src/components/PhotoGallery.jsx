@@ -71,7 +71,7 @@ export default function PhotoGallery({ photos }) {
                 Our Precious Moments
             </motion.h2>
 
-            <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+            <motion.div className="flex flex-wrap justify-center gap-10 md:gap-12" >
                 {photos.map((photo, index) => (
                     <motion.div
                         key={index}
@@ -84,7 +84,7 @@ export default function PhotoGallery({ photos }) {
                         }}
                         onHoverStart={() => setHoveredIndex(index)}
                         onHoverEnd={() => setHoveredIndex(null)}
-                        className={`relative bg-white p-3 ${frameStyles[index % frameStyles.length]} hover:shadow-2xl transition-all duration-300 cursor-pointer`}
+                        className={`relative bg-white p-3 ${frameStyles[index % frameStyles.length]} hover:shadow-2xl transition-all duration-300 cursor-pointer w-full sm:w-[calc(50%-2.25rem)] lg:w-[calc(33.333%-2.5rem)]`}
                         onClick={() => setSelectedPhoto(photo)}
                     >
                         <div
@@ -99,11 +99,8 @@ export default function PhotoGallery({ photos }) {
                                 src={photo.src || "/placeholder.svg"}
                                 alt={photo.alt}
                                 fill
+                                sizes="200"
                                 className="object-contain h-full transition-all duration-500"
-                            // style={{
-                            //     transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
-                            //     objectFit: index % 3 === 0 ? "cover" : index % 3 === 1 ? "contain" : "cover",
-                            // }}
                             />
 
                             {/* Overlay on hover */}
@@ -111,7 +108,7 @@ export default function PhotoGallery({ photos }) {
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    className="absolute inset-0 bg-gradient-to-t from-rose-500/50 to-transparent flex items-end justify-center p-4"
+                                    className="absolute inset-0 bg-gradient-to-t from-rose-500/40 to-transparent flex items-end justify-center p-4"
                                 />
                             )}
                         </div>
@@ -138,7 +135,7 @@ export default function PhotoGallery({ photos }) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4"
+                        className="fixed inset-0 bg-black/90 backdrop-blur-md z-[100] flex items-center justify-center p-4"
                         onClick={() => setSelectedPhoto(null)}
                     >
                         <motion.div
@@ -165,7 +162,7 @@ export default function PhotoGallery({ photos }) {
                                 />
                             </div>
 
-                            <motion.div
+                            {/* <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
@@ -174,7 +171,7 @@ export default function PhotoGallery({ photos }) {
                                 <p className="text-lg font-medium text-pink-600 bg-white/80 mx-auto py-2 px-4 rounded-full inline-block">
                                     {selectedPhoto.alt}
                                 </p>
-                            </motion.div>
+                            </motion.div> */}
 
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
