@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💖 Anniversary Surprise Website
 
-## Getting Started
+This is a special anniversary-themed website that reveals a heartfelt message with animations, music, and surprise effects. It includes a loader, countdown timer, "tap to reveal" screen, confetti effect, background music, and beautiful photo sections.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- ⏳ Animated loader and countdown timer
+- 💌 Tap-to-reveal surprise screen
+- 💬 Heartfelt letter section
+- 🎶 Background music with custom play/pause button
+- 📸 Photo section with responsive layout
+- 🎊 Confetti effect on reveal using canvas-confetti
+- 🌙 Mobile responsive and visually engaging design
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js
+- Tailwind CSS
+- Framer Motion
+- Canvas-Confetti
+
+---
+
+## 🛠️ Local Setup
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/Anuj579/anniversary-site.git
+cd anniversary-site
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Run the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the site in action.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Customization
 
-## Learn More
+- Change `ANNIVERSARY_DATE` in `app/page.jsx` to update the countdown target date.
+- Replace the images in the `public` folder to personalize the photo gallery.
+- Update `/public/bg.mp3` for your own background music.
+- Customize text, emojis, and theme colors to fit your vibe.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Connect with Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 📸 Instagram: [@anujbuilds](https://instagram.com/anujbuilds)
+- 🐦 Twitter: [@anujbuilds](https://twitter.com/anujbuilds)
+- 💼 LinkedIn: [Anuj Chaudhary](https://linkedin.com/in/anujchaudhary549)
+- 📺 YouTube: [@anujbuilds](https://youtube.com/@anujbuilds)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thanks for checking out this project! 💗  
+If you like it, **give it a ⭐** and share the love!
