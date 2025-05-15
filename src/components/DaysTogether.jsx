@@ -98,7 +98,7 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                         {/* Animated particles around the number */}
                         {animationComplete && (
                             <div className="absolute inset-0 pointer-events-none">
-                                {Array.from({ length: 12 }).map((_, i) => (
+                                {Array.from({ length: 8 }).map((_, i) => (
                                     <motion.div
                                         key={i}
                                         className="absolute text-xl"
@@ -110,7 +110,7 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                                         animate={{
                                             x: (Math.random() - 0.5) * 150,
                                             y: (Math.random() - 0.5) * 150,
-                                            opacity: [0, 1, 0],
+                                            opacity: [0, 0.8, 0],
                                             scale: [0.5, 1.5, 0.5],
                                             rotate: Math.random() * 360,
                                         }}

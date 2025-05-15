@@ -7,18 +7,20 @@ import Countdown from "@/components/Countdown"
 import DaysTogether from "@/components/DaysTogether"
 import PhotoGallery from "@/components/PhotoGallery"
 import Message from "@/components/Message"
-import MusicPlayer from "@/components/MusicPlayer"
+// import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
 import FloatingElements from "@/components/FloatingElements"
-import confetti from "canvas-confetti"
+import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-05-10T21:16:00"
+const ANNIVERSARY_DATE = "2025-05-15T17:50:00"
 // Change this to the date you got together
-const TOGETHER_DATE = "2022-05-15T00:00:00"
+const TOGETHER_DATE = "2022-01-01T00:00:00"
 
 export default function Home() {
   const [loading, setLoading] = useState(false)
   const [showContent, setShowContent] = useState(false)
+  const [showTapToReveal, setShowTapToReveal] = useState(false)
+  // const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,30 +36,34 @@ export default function Home() {
     const anniversary = new Date(ANNIVERSARY_DATE)
     if (now >= anniversary) {
       setShowContent(true)
+      // setShowTapToReveal(true)
     }
   }, [])
 
   const handleCountdownComplete = () => {
     setShowContent(true)
-
-    // Trigger confetti when countdown completes
-    confetti({
-      particleCount: 200,
-      spread: 100,
-      origin: { y: 0.6 },
-      colors: ["#ff80ab", "#ea80fc", "#8c9eff", "#ff8a80"],
-    })
+    setShowTapToReveal(true)
   }
 
+  const handleReveal = () => {
+    setShowTapToReveal(false)
+    setShowContent(true)
+
+    // Uncomment this if you want to add a background song
+    // setTimeout(() => {
+    //   setPlaySong(true)
+    // }, 1000);
+  }
+
+  // Add your photos here
   const photos = [
     { src: "/image.png", alt: "Us together" },
-    { src: "/image.png", alt: "Special moment" },
+    { src: "/image2.png", alt: "Special moment" },
     { src: "/image.png", alt: "Happy times" },
-    { src: "/image.png", alt: "Memories" },
-    { src: "/image.png", alt: "Our adventure" },
-    { src: "/image.png", alt: "Beautiful day" },
+    { src: "/image2.png", alt: "Memories" },
   ]
 
+  // Change this message according to you
   const message = `Dear Love,
 This journey with you has been the most beautiful adventure of my life. Every moment spent with you feels like a blessing, and I cherish each day we've been together.
 From our first meeting to today, you've filled my life with joy, laughter, and unconditional love. Your smile brightens my darkest days, and your love gives me strength when I need it most.
@@ -70,7 +76,7 @@ Me`
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100">
       <FloatingElements />
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {loading ? (
           <Loader key="loader" />
         ) : !showContent ? (
@@ -116,9 +122,11 @@ Me`
 
             <Countdown targetDate={ANNIVERSARY_DATE} onComplete={handleCountdownComplete} />
           </motion.div>
-        ) : (
+        ) : showTapToReveal ? (
+          <TapToReveal key="tap-to-reveal" onReveal={handleReveal} />) : (
           <>
-            <MusicPlayer />
+            {/* Uncomment this if you want to add a background song */}
+            {/* <MusicPlayer playSong={playSong} />  */}
             <motion.div
               key="content"
               initial={{ opacity: 0 }}
@@ -158,7 +166,7 @@ Me`
                 transition={{ delay: 1.5 }}
                 className="text-center mt-16 mb-8 text-pink-600"
               >
-                <p className="text-lg font-medium">Made with ❤️ just for you</p>
+                <p className="text-lg font-medium">Made with ❤️ by @anujbuilds</p>
               </motion.footer>
             </motion.div>
           </>

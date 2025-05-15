@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Volume2, VolumeX } from "lucide-react"
 
-export default function MusicPlayer() {
+export default function MusicPlayer({ playSong }) {
     const [isPlaying, setIsPlaying] = useState(false)
     const audioRef = useRef(null)
 
@@ -21,6 +21,17 @@ export default function MusicPlayer() {
             }
         };
     }, []);
+
+    useEffect(() => {
+        if (playSong && audioRef.current && audioRef.current.paused) {
+            audioRef.current.play().then(() => {
+                setIsPlaying(true);
+            }).catch((err) => {
+                console.error("Playback error:", err);
+            });
+        }
+    }, [playSong]);
+
 
     const togglePlayback = () => {
         const audio = audioRef.current;

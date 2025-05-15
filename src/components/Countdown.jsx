@@ -70,7 +70,7 @@ export default function Countdown({ targetDate, onComplete }) {
     return (
         <div className="w-full max-w-4xl relative">
             <motion.div
-                className="absolute -top-16 -left-8 md:-top-24 md:-left-24 w-32 h-32 text-6xl"
+                className="absolute -top-16 -left-8 md:-top-24 md:-left-24 w-32 h-32 text-5xl md:text-6xl"
                 animate={{
                     y: [0, -20, 0],
                     rotate: [0, 10, 0],
@@ -85,7 +85,7 @@ export default function Countdown({ targetDate, onComplete }) {
             </motion.div>
 
             <motion.div
-                className="absolute -bottom-20 -right-16 md:-bottom-24 md:-right-24 w-32 h-32 text-6xl"
+                className="absolute -bottom-20 -right-16 md:-bottom-24 md:-right-24 w-32 h-32 text-5xl md:text-6xl"
                 animate={{
                     y: [0, -20, 0],
                     rotate: [0, -10, 0],
