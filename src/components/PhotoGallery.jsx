@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
+import { XIcon } from "lucide-react"
 
 export default function PhotoGallery({ photos }) {
     const [selectedPhoto, setSelectedPhoto] = useState(null)
@@ -179,7 +180,7 @@ export default function PhotoGallery({ photos }) {
                                 className="absolute top-2 right-2 bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center cursor-pointer"
                                 onClick={() => setSelectedPhoto(null)}
                             >
-                                ✕
+                                <XIcon />
                             </motion.button>
                         </motion.div>
                     </motion.div>
