@@ -83,7 +83,7 @@ export default function Countdown({ targetDate, onComplete }) {
             </motion.div>
 
             <motion.div
-                className="absolute -bottom-20 -right-16 md:-bottom-24 md:-right-24 w-32 h-32 text-5xl md:text-6xl"
+                className="absolute bottom-0 -right-5 md:-bottom-6 md:-right-24 text-5xl md:text-6xl"
                 animate={{
                     y: [0, -20, 0],
                     rotate: [0, -10, 0],
