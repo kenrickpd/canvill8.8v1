@@ -116,10 +116,10 @@ export default function Countdown({ targetDate, onComplete }) {
                         }}
                         className="relative bg-white rounded-2xl shadow-xl overflow-hidden"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-pink-100 to-purple-100 opacity-50" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-purple-100 opacity-50" />
 
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-400 to-purple-400" />
-                        <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-400" />
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-purple-400" />
+                        <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-r from-purple-400 to-cyan-400" />
 
                         <div className="relative p-6 flex flex-col items-center justify-center">
                             <motion.div
@@ -139,7 +139,7 @@ export default function Countdown({ targetDate, onComplete }) {
                             </motion.div>
 
                             <motion.div
-                                className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-purple-500"
+                                className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-purple-500"
                                 key={`${unit.label}-${unit.value}`}
                                 initial={{ scale: 1.5, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
@@ -169,12 +169,12 @@ export default function Countdown({ targetDate, onComplete }) {
             </motion.div>
 
             <motion.p
-                className="text-center mt-12 text-lg md:text-xl font-medium text-pink-600"
+                className="text-center mt-12 text-lg md:text-xl font-medium text-cyan-600"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
             >
-                Until our special day ❤️
+                Until our anniversary ❤️
             </motion.p>
         </div>
     )

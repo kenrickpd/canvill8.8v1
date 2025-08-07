@@ -61,16 +61,16 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
             className="my-16 py-12 px-6 relative"
         >
             <div className="absolute inset-0 bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-purple-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 to-sky-50" />
 
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-purple-400" />
-                <div className="absolute bottom-0 right-0 w-full h-2 bg-gradient-to-r from-purple-400 to-pink-400" />
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-cyan-400 to-sky-400" />
+                <div className="absolute bottom-0 right-0 w-full h-2 bg-gradient-to-r from-sky-400 to-cyan-400" />
 
                 {/* Decorative elements */}
-                <div className="absolute top-4 left-4 text-4xl animate-float">💖</div>
-                <div className="absolute bottom-4 right-4 text-4xl animate-float-delay">💘</div>
+                <div className="absolute top-4 left-4 text-4xl animate-float">💙</div>
+                <div className="absolute bottom-4 right-4 text-4xl animate-float-delay">💙</div>
                 <div className="absolute top-1/4 right-10 text-3xl animate-float" style={{ animationDelay: "1s" }}>
-                    💝
+                    💙
                 </div>
             </div>
 
@@ -79,15 +79,15 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="text-3xl md:text-4xl md:py-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-center mb-10 animate-gradient"
+                    className="text-3xl md:text-4xl md:py-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500 text-center mb-10 animate-gradient"
                 >
-                    Our Beautiful Journey Together
+                    Days together countdown !
                 </motion.h2>
 
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative">
                         <motion.div
-                            className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-purple-500 mb-6 animate-gradient"
+                            className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-sky-500 mb-6 animate-gradient"
                             initial={{ scale: 0.5, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ type: "spring", stiffness: 100 }}
@@ -121,7 +121,7 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                                             ease: "easeInOut",
                                         }}
                                     >
-                                        {["❤️", "✨", "💖", "💘", "💝"][Math.floor(Math.random() * 5)]}
+                                        {["❤️", "✨", "🤍", "💜", "💙"][Math.floor(Math.random() * 5)]}
                                     </motion.div>
                                 ))}
                             </div>
@@ -132,16 +132,16 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="text-2xl md:text-3xl text-pink-500 font-medium mb-8"
+                        className="text-2xl md:text-3xl text-cyan-500 font-medium mb-8"
                     >
-                        Beautiful Days Together
+                        Wonderful Days Together
                     </motion.div>
 
                     <motion.div
                         initial={{ opacity: 0, width: 0 }}
                         animate={{ opacity: 1, width: "100px" }}
                         transition={{ delay: 1, duration: 0.8 }}
-                        className="h-1 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full mb-8"
+                        className="h-1 bg-gradient-to-r from-cyan-400 to-sky-400 rounded-full mb-8"
                     />
 
                     <motion.p
@@ -150,8 +150,8 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                         transition={{ delay: 1.2 }}
                         className="text-center text-lg text-gray-600 max-w-2xl"
                     >
-                        Every single day has been a blessing. From our first hello to today, each moment with you has been magical.
-                        Here's to countless more days filled with love, laughter, and beautiful memories!
+                        Every single day passed by has been a blessing.
+                        Cheers to countless more days filled with love, laughter, and beautiful memories!
                     </motion.p>
 
                     <motion.div

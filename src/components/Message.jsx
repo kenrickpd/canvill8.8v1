@@ -47,9 +47,9 @@ export default function Message({ message }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-3xl md:text-4xl md:py-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-center mb-10 animate-gradient"
+                className="text-3xl md:text-4xl md:py-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500 text-center mb-10 animate-gradient"
             >
-                A Letter From My Heart
+                A Letter From The One And Only Kenkun
             </motion.h2>
 
             <motion.div
@@ -59,18 +59,18 @@ export default function Message({ message }) {
                 className="bg-white p-8 md:p-12 rounded-2xl shadow-2xl relative"
             >
                 {/* Decorative background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-purple-50 opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 to-sky-50 opacity-50" />
 
                 {/* Border gradients */}
-                <div className="absolute top-0 left-0 w-full h-2 rounded-se-lg bg-gradient-to-r from-pink-400 to-purple-400" />
-                <div className="absolute bottom-0 right-0 w-full h-2 rounded-bl-lg bg-gradient-to-r from-purple-400 to-pink-400" />
+                <div className="absolute top-0 left-0 w-full h-2 rounded-se-lg bg-gradient-to-r from-cyan-400 to-sky-400" />
+                <div className="absolute bottom-0 right-0 w-full h-2 rounded-bl-lg bg-gradient-to-r from-sky-400 to-cyan-400" />
 
                 {/* Decorative elements */}
-                <div className="absolute -top-5 -left-5 w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center transform rotate-12">
+                <div className="absolute -top-5 -left-5 w-16 h-16 bg-cyan-200 rounded-full flex items-center justify-center transform rotate-12">
                     <span className="text-3xl">💌</span>
                 </div>
 
-                <div className="absolute -bottom-5 -right-5 w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center transform -rotate-12">
+                <div className="absolute -bottom-5 -right-5 w-16 h-16 bg-sky-200 rounded-full flex items-center justify-center transform -rotate-12">
                     <span className="text-3xl">❤️</span>
                 </div>
 
@@ -107,7 +107,7 @@ export default function Message({ message }) {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.7 + index * 0.08 }}
-                            className={`${line.trim() === "" ? "h-4" : ""} ${index === 0 ? "text-xl font-medium text-pink-600" : ""}`}
+                            className={`${line.trim() === "" ? "h-4" : ""} ${index === 0 ? "text-xl font-medium text-cyan-600" : ""}`}
                         >
                             {line}
                         </motion.p>

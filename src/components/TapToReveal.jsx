@@ -57,9 +57,9 @@ export default function TapToReveal({ onReveal }) {
                     animate={isAnimating ? { scale: 1.5, opacity: 0 } : {}}
                     transition={{ duration: 1 }}
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-purple-50" />
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-purple-400" />
-                    <div className="absolute bottom-0 right-0 w-full h-2 bg-gradient-to-r from-purple-400 to-pink-400" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 to-blue-50" />
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-cyan-400 to-blue-400" />
+                    <div className="absolute bottom-0 right-0 w-full h-2 bg-gradient-to-r from-blue-400 to-cyan-400" />
                 </motion.div>
 
                 <div className="relative z-10 space-y-8">
@@ -75,15 +75,15 @@ export default function TapToReveal({ onReveal }) {
                             ease: "easeInOut",
                         }}
                     >
-                        💝
+                        💙
                     </motion.div>
 
-                    <motion.h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 animate-gradient">
-                        Your Anniversary Surprise Awaits!
+                    <motion.h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 animate-gradient">
+                        Waduh ada apa ini?!
                     </motion.h2>
 
                     <motion.div
-                        className="flex items-center justify-center space-x-2 text-lg md:text-xl text-pink-600 font-medium"
+                        className="flex items-center justify-center space-x-2 text-lg md:text-xl text-cyan-600 font-medium"
                         animate={{
                             y: [0, -10, 0],
                         }}

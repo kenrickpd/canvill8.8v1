@@ -21,7 +21,7 @@ export default function FloatingElements() {
             size: Math.random() * 30 + 20,
             duration: Math.random() * 15 + 10,
             delay: Math.random() * 5,
-            emoji: ["❤️", "💕", "💖", "💘", "💝", "🌸", "✨", "🌟", "🎀", "🌺"][Math.floor(Math.random() * 10)],
+            emoji: ["💙", "💕", "💜", "💝", "🐈", "😻", "🌸", "✨", "🌟", "🎀", "🌺"][Math.floor(Math.random() * 10)],
         }))
 
         setElements(newElements)

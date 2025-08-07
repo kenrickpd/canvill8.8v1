@@ -16,14 +16,14 @@ export default function Loader() {
             rotate: Math.random() * 360,
             delay: Math.random() * 5,
             duration: Math.random() * 5 + 5,
-            emoji: ["❤️", "💕", "💖", "💝", "🌸", "✨"][Math.floor(Math.random() * 6)],
+            emoji: ["💙", "💕", "💜", "💝", "🐈", "😻"][Math.floor(Math.random() * 6)],
         }));
 
         setItems(generated);
     }, []);
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-pink-200 via-purple-100 to-blue-200 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-cyan-200 via-blue-100 to-blue-200 z-50">
             <div className="absolute inset-0 overflow-hidden">
                 {items.map((item, i) => (
                     <motion.div
@@ -75,13 +75,13 @@ export default function Loader() {
                         }}
                     >
 
-                        <div className="absolute inset-0 rounded-full border-4 border-pink-300 border-t-pink-500 animate-spin"></div>
+                        <div className="absolute inset-0 rounded-full border-4 border-cyan-300 border-t-cyan-500 animate-spin"></div>
                         <motion.div
                             className="absolute inset-0 flex items-center justify-center"
                             animate={{ rotate: 360 }}
                             transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                         >
-                            <span className="text-5xl">❤️</span>
+                            <span className="text-5xl">💙</span>
                         </motion.div>
                     </motion.div>
                 </motion.div>
@@ -93,7 +93,7 @@ export default function Loader() {
                     transition={{ delay: 0.5 }}
                 >
                     <motion.p
-                        className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-2 animate-gradient"
+                        className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 mb-2 animate-gradient"
                         animate={{
                             opacity: [0.5, 1, 0.5],
                         }}
@@ -103,7 +103,7 @@ export default function Loader() {
                             ease: "easeInOut",
                         }}
                     >
-                        Loading our love story...
+                        Loading dulu yaa Pipuu
                     </motion.p>
 
                     <motion.div
@@ -115,7 +115,7 @@ export default function Loader() {
                         {[0, 1, 2].map((i) => (
                             <motion.div
                                 key={i}
-                                className="w-3 h-3 rounded-full bg-pink-500"
+                                className="w-3 h-3 rounded-full bg-cyan-500"
                                 animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
                                 transition={{
                                     duration: 1,
