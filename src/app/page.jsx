@@ -68,7 +68,7 @@ export default function Home() {
 Thank you for walking beside me through this beautiful year.
 Since the moment we first met, my life has been overflowing with happiness, laughter, and so much love—thanks to you and us.
 With every year we spend together, my love for you only grows. You're the one I trust the most, my greatest support, and the love of my life.
-Happy Anniversary, my pipipu! I can’t wait to keep building unforgettable memories with you for years to come.
+Happy Anniversary, my pipipu! I can’t wait to keep building unforgettable memories with you, enchip, and ucel for years to come.
 From the depths of my heart,
 Kenkun.`
 

@@ -109,7 +109,7 @@ export default function PhotoGallery({ photos }) {
                                 <motion.div
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    className="absolute inset-0 bg-gradient-to-t from-rose-500/40 to-transparent flex items-end justify-center p-4"
+                                    className="absolute inset-0 bg-gradient-to-t from-cyan-500/40 to-transparent flex items-end justify-center p-4"
                                 />
                             )}
                         </div>
