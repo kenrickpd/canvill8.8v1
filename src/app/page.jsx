@@ -7,12 +7,12 @@ import Countdown from "@/components/Countdown"
 import DaysTogether from "@/components/DaysTogether"
 import PhotoGallery from "@/components/PhotoGallery"
 import Message from "@/components/Message"
-// import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
+import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
 import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-08-07T00:00:00"
+const ANNIVERSARY_DATE = "2025-08-08T00:30:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2024-08-08T00:00:00"
 
@@ -20,7 +20,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
   const [showContent, setShowContent] = useState(false)
   const [showTapToReveal, setShowTapToReveal] = useState(false)
-  // const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
+  const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -125,8 +125,7 @@ Kenkun.`
         ) : showTapToReveal ? (
           <TapToReveal key="tap-to-reveal" onReveal={handleReveal} />) : (
           <>
-            {/* Uncomment this if you want to add a background song */}
-            {/* <MusicPlayer playSong={playSong} />  */}
+            <MusicPlayer playSong={playSong} /> 
             <motion.div
               key="content"
               initial={{ opacity: 0 }}
