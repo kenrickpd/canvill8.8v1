@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Happy Anniversary!",
-  description: "A celebration of our love",
+  title: "Hihihi",
+  description: "Canvill8.8v1",
 }
 
 export default function RootLayout({ children }) {
